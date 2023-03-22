@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: blue;
+    height: 115px;
+}
+
+main {
+    display: flex;
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+aside {
+    background-color: lightblue;
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hidden {
+    display: none;
+}
+
