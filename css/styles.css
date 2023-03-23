@@ -6,7 +6,13 @@
     box-sizing: border-box;
 }
 
-header {
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body>header {
     background-color: blue;
     height: 115px;
     display: flex;
@@ -23,6 +29,7 @@ h1 {
 button {
     background-color: transparent;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 400;
@@ -38,8 +45,45 @@ i {
 
 main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: aquamarine;
-    height: 100vh;
+    flex: 1;
+}
+
+#meme-container {
+    display: flex;
+    flex-direction: column;
+    width: 610px;
+    height: 610px;
+}
+
+#top-text-container, #bottom-text-container {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#meme-container p {
+    font-size: 40px;
+    color: #000000;
+}
+
+img {
+    flex: 1;
+    width: 100%;
+}
+
+#btn-download {
+    background-color: #2e7d32;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+#btn-download:hover, #btn-download:focus {
+    background-color:  #1b5e20;
 }
 
 aside {
@@ -56,7 +100,4 @@ aside {
 
 .hidden {
     display: none;
-}
-
-body {font-family: comic sans
 }
