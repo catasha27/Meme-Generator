@@ -16,16 +16,16 @@
     <header>
         <h1>Generador de Memes</h1>
         <nav>
-            <button id="btn-image-menu">
+            <button id="btn-image-menu" class="btn">
                 <i class="fas fa-file-image"></i>Imagen
             </button>
-            <button id="btn-text-menu">
+            <button id="btn-text-menu" class="btn">
                 <i class="fas fa-font"></i>Texto
             </button>
-            <button id="btn-light-mode">
+            <button id="btn-light-mode" class="btn">
                 <i class="far fa-lightbulb"></i>Modo claro
             </button>
-            <button id="btn-dark-mode" class="hidden">
+            <button id="btn-dark-mode" class="btn hidden">
                 <i class="far fa-lightbulb hidden"></i>Modo oscuro
             </button>
         </nav>
@@ -38,13 +38,58 @@
             <img src="" alt="">
             <footer id="bottom-text-container"><p>BOTTOM TEXT</p></footer>
         </section>
-        <button id="btn-download">
+        <button id="btn-download" class="btn">
             <i class="fas fa-download"></i>Descargar meme
         </button>
         <!-- ASIDE MENUS SECTION -->
-        <aside id="image-menu">
+        <!-- IMAGE MENU -->
+        <aside id="image-menu-panel">
+            <span class="btn-close hidden">&times;</span>
+            <section id="image-menu" class="sidebar">
+                <h2>IMAGEN</h2>
+                <label for="meme-image" class="label">URL</label>
+                <input type="url" name="meme-image" value="" class="input-box">
+                <fieldset id="image-background-options">
+                    <legend class="label">FONDO</legend>
+                    <div class="image-background-color-wrapper input-box">
+                        <input type="color" name="image-background-color" id="image-background-color" value="#FFFFFF">
+                        <span class="">#FFFFFF</span>
+                    </div>
+                    <select name="image-blend-options" id="blend-mode-menu" class="input-box">
+                        <option value="normal">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
+                    </select>
+                </fieldset>
+                <fieldset id="image-filter-options">
+                    <legend class="label">FILTROS</legend>
+                    <label for="brightness-slider" class="slider-label">BRILLO</label>
+                    <input type="range" name="brightness-slider" id="brightness-slider" class="slider" min="0" max="1" value="1" step="0.1">
+                    <label for="opacity-slider" class="slider-label">OPACIDAD</label>
+                    <input type="range" name="opacity-slider" id="opacity-slider" class="slider" min="0" max="1" value="1" step="0.1">
+                    <label for="contrast-slider" class="slider-label">CONTRASTE</label>
+                    <input type="range" name="contrast-slider" id="contrast-slider" class="slider" min="100" max="1000" value="100" step="1">
+                    <label for="blur-slider" class="slider-label">DESENFOQUE</label>
+                    <input type="range" name="blur-slider" id="blur-slider" class="slider" min="0" max="10" value="0" step="0.1">
+                    <label for="grayscale-slider" class="slider-label">ESCALA DE GRISES</label>
+                    <input type="range" name="grayscale-slider" id="grayscale-slider" class="slider" min="0" max="100" value="0" step="1">
+                    <label for="sepia-slider" class="slider-label">SEPIA</label>
+                    <input type="range" name="sepia-slider" id="sepia-slider" class="slider" min="0" max="100" value="0" step="1">
+                    <label for="hue-rotation-slider" class="slider-label">HUE</label>
+                    <input type="range" name="hue-rotation-slider" id="hue-rotation-slider" class="slider" min="0" max="359" value="0" step="1">
+                    <label for="saturation-slider" class="slider-label">SATURADO</label>
+                    <input type="range" name="saturation-slider" id="saturation-slider" class="slider" min="100" max="1000" value="100" step="10">
+                    <label for="invert-slider" class="slider-label">NEGATIVO</label>
+                    <input type="range" name="invert-slider" id="invert-slider" class="slider" min="0" max="1" value="0" step="0.1">
+                    <button type="reset" id="btn-reset-filters" class="btn">Restablecer filtros</button>
+                </fieldset>
+            </section>
         </aside>
-        <aside id="text-menu" class="hidden">
+        <!-- TEXT MENU -->
+        <aside id="text-menu-panel" class="hidden">
         </aside>    
     </main>
     

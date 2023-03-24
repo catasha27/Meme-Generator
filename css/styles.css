@@ -26,7 +26,7 @@ h1 {
     font-weight: 600;
 }
 
-button {
+.btn {
     background-color: transparent;
     border: none;
     border-radius: 3px;
@@ -41,6 +41,10 @@ button {
 
 i {
     margin-right: 5px;
+}
+
+.hidden {
+    display: none;
 }
 
 main {
@@ -95,9 +99,77 @@ aside {
     top: 0;
     bottom: 0;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    padding: 30px 15px;
 }
 
-.hidden {
-    display: none;
+/* .bth-close {
+    color: #ffffff;
+    position: fixed;
+    right: 0;
+    top: 15px;
+    
+} */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
 }
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.input-box {
+    background-color: #2e7d32;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    height: 36px;
+}
+
+fieldset{
+    border: none;
+}
+
+#image-background-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#image-filter-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-label {
+    font-size: 12px;
+}
+
+.slider {
+    margin: 10px 0 15px;
+    height: 6px;
+    color: grey;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: purple;
+    cursor: pointer;
+  }
+
+  
