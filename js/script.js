@@ -158,3 +158,26 @@ $("#invert-slider").addEventListener("input", () => {
 })
 
 
+// RESET AL FILTER VALUES TO DEFAULTS ONES 
+
+$("#btn-reset-filters").addEventListener("click", () => {
+    brightnessRangeValue = 1
+    opacityRangeValue = 1
+    contrastRangeValue = 100
+    blurRangeValue = 0
+    grayscaleRangeValue = 0
+    sepiaRangeValue = 0
+    hueRangeValue = 0
+    saturateRangeValue = 100
+    invertRangeValue = 0
+    $("#brightness-slider").value = brightnessRangeValue
+    $("#opacity-slider").value = opacityRangeValue
+    $("#contrast-slider").value = contrastRangeValue
+    $("#blur-slider").value = blurRangeValue   
+    $("#grayscale-slider").value = grayscaleRangeValue
+    $("#sepia-slider").value = sepiaRangeValue
+    $("#hue-rotate-slider").value = hueRangeValue
+    $("#saturate-slider").value = saturateRangeValue
+    $("#invert-slider").value = invertRangeValue
+    updateImageFilter()
+})
