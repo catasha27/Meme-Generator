@@ -305,14 +305,14 @@ fieldset button:nth-of-type(even) {
     margin: 0 5px;
 }
 
-/* #btn-no-outline {
+.no-outline {
     text-shadow: none;
 } 
 
-#btn-light-outline {
+.light-outline {
     text-shadow: rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px;
 }
 
-#btn-dark-outline {
+.dark-outline {
     text-shadow: rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px;
-} */
+}

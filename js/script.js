@@ -289,21 +289,26 @@ $("#transparent-background").addEventListener("input", () => {
     }
 })
 
+// RESET TEXT SHADOW TO TOP AND BOTTOM TEXT
 
-// APPLY DARK TEXT SHADOW TO TOP AND BOTTOM TEXT
-
-
-
+$("#btn-no-outline").addEventListener("click", () => {
+    $("#top-text-container").setAttribute("class", "no-outline")
+    $("#bottom-text-container").setAttribute("class", "no-outline")
+})
 
 // APPLY LIGHT TEXT SHADOW TO TOP AND BOTTOM TEXT
 
+$("#btn-light-outline").addEventListener("click", () => {
+    $("#top-text-container").setAttribute("class", "light-outline")
+    $("#bottom-text-container").setAttribute("class", "light-outline")
+})
 
+// APPLY DARK TEXT SHADOW TO TOP AND BOTTOM TEXT
 
-
-// RESET TEXT SHADOW TO TOP AND BOTTOM TEXT
-
-
-
+$("#btn-dark-outline").addEventListener("click", () => {
+    $("#top-text-container").setAttribute("class", "dark-outline")
+    $("#bottom-text-container").setAttribute("class", "dark-outline")
+})
 
 // SET TOP & BOTTOM PADDING VALUE TO TOP AND BOTTOM TEXT
 
