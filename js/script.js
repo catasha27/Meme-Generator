@@ -53,6 +53,8 @@ const downloadMeme = () => {
 $("#btn-download").addEventListener('click', downloadMeme)
 
 
+// ASIDE IMAGE MENU FUNCTIONS
+
 // ADD URL AS THE MEME IMAGE
 
 $("#meme-image").addEventListener("input", () => {
@@ -180,4 +182,24 @@ $("#btn-reset-filters").addEventListener("click", () => {
     $("#saturate-slider").value = saturateRangeValue
     $("#invert-slider").value = invertRangeValue
     updateImageFilter()
+})
+
+
+// ASIDE TEXT MENU FUNCTIONS
+
+// MODIFY TOP TEXT FROM INPUT
+
+$("#top-text-input").addEventListener("input", () => {
+    $("#top-text-container").innerText = $("#top-text-input").value.toUpperCase()
+})
+
+// REMOVE TOP TEXT CONTAINER FROM MEME
+
+$("#no-top-text").addEventListener("input", () => {
+    const isChecked = $("#no-top-text").checked
+    if (isChecked) {
+        $(".top-text-wrapper").classList.add("hidden")
+    } else {
+        $(".top-text-wrapper").classList.remove("hidden")
+    }
 })
