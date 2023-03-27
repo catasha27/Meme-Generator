@@ -288,3 +288,27 @@ $("#transparent-background").addEventListener("input", () => {
     $(".bottom-text-wrapper").style.backgroundColor = $("#text-background-color").value
     }
 })
+
+
+// APPLY DARK TEXT SHADOW TO TOP AND BOTTOM TEXT
+
+
+
+
+// APPLY LIGHT TEXT SHADOW TO TOP AND BOTTOM TEXT
+
+
+
+
+// RESET TEXT SHADOW TO TOP AND BOTTOM TEXT
+
+
+
+
+// SET TOP & BOTTOM PADDING VALUE TO TOP AND BOTTOM TEXT
+
+$("#text-padding-value").addEventListener("input", () => {
+    $("#top-text-container").style.padding = `${$("#text-padding-value").value}px 50px`
+    $("#bottom-text-container").style.padding = `${$("#text-padding-value").value}px 50px`
+})
+

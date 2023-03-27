@@ -89,7 +89,7 @@ main {
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #000000;
-    padding: 15px 50px;
+    padding: 17px 50px;
 }
 
 .image-container {
@@ -300,6 +300,18 @@ fieldset{
     padding: 0 10px;
 }
 
-#btn-light-outline {
+fieldset button:nth-of-type(even) {
     margin: 0 5px;
 }
+
+/* #btn-no-outline {
+    text-shadow: none;
+} 
+
+#btn-light-outline {
+    text-shadow: rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px;
+}
+
+#btn-dark-outline {
+    text-shadow: rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px;
+} */
