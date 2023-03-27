@@ -234,3 +234,24 @@ $("#font-size-value").addEventListener("input", () => {
     $("#top-text-container").style.fontSize = `${$("#font-size-value").value}px`
     $("#bottom-text-container").style.fontSize = `${$("#font-size-value").value}px`
 })
+
+// SET TEXT ALIGNMENT LEFT TO TOP AND BOTTOM TEXT
+
+$("#btn-align-text-left").addEventListener("click", () => {
+    $("#top-text-container").style.textAlign = $("#btn-align-text-left").value
+    $("#bottom-text-container").style.textAlign = $("#btn-align-text-left").value
+})
+
+// SET TEXT ALIGNMENT CENTER TO TOP AND BOTTOM TEXT
+
+$("#btn-align-text-center").addEventListener("click", () => {
+    $("#top-text-container").style.textAlign = $("#btn-align-text-center").value
+    $("#bottom-text-container").style.textAlign = $("#btn-align-text-center").value
+})
+
+// SET TEXT ALIGNMENT RIGHT TO TOP AND BOTTOM TEXT
+
+$("#btn-align-text-right").addEventListener("click", () => {
+    $("#top-text-container").style.textAlign = $("#btn-align-text-right").value
+    $("#bottom-text-container").style.textAlign = $("#btn-align-text-right").value
+})
