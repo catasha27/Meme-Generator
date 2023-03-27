@@ -76,3 +76,85 @@ $("#image-background-color").addEventListener("input", () => {
 $("#blend-mode-menu").addEventListener("input", () => {
     $(".image-container").style.backgroundBlendMode = $("#blend-mode-menu").value
 })
+
+
+// APPLY ALL VALUES OF FILTER TO IMAGE
+
+let brightnessRangeValue = 1
+let opacityRangeValue = 1
+let contrastRangeValue = 100
+let blurRangeValue = 0
+let grayscaleRangeValue = 0
+let sepiaRangeValue = 0
+let hueRangeValue = 0
+let saturateRangeValue = 100
+let invertRangeValue = 0
+
+const updateImageFilter = () => {
+    $(".image-container").style.filter = `brightness(${brightnessRangeValue}) opacity(${opacityRangeValue}) contrast(${contrastRangeValue}%) blur(${blurRangeValue}px) grayscale(${grayscaleRangeValue}%) sepia(${sepiaRangeValue}%) hue-rotate(${hueRangeValue}deg) saturate(${saturateRangeValue}%) invert(${invertRangeValue})`
+}
+
+// APPLY BRIGHTNESS FILTER TO IMAGE
+
+$("#brightness-slider").addEventListener("input", () => {
+    brightnessRangeValue = $("#brightness-slider").value
+    updateImageFilter()
+})
+
+// APPLY OPACITY FILTER TO IMAGE
+
+$("#opacity-slider").addEventListener("input", () => {
+    opacityRangeValue = $("#opacity-slider").value
+    updateImageFilter()
+})
+
+// APPLY CONTRAST FILTER TO IMAGE
+
+$("#contrast-slider").addEventListener("input", () => {
+    contrastRangeValue = $("#contrast-slider").value
+    updateImageFilter()
+})
+
+// APPLY BLUR FILTER TO IMAGE
+
+$("#blur-slider").addEventListener("input", () => {
+    blurRangeValue = $("#blur-slider").value
+    updateImageFilter()
+})
+
+// APPLY GRAYSCALE FILTER TO IMAGE
+
+$("#grayscale-slider").addEventListener("input", () => {
+    grayscaleRangeValue = $("#grayscale-slider").value
+    updateImageFilter()
+})
+
+// APPLY SEPIA FILTER TO IMAGE
+
+$("#sepia-slider").addEventListener("input", () => {
+    sepiaRangeValue = $("#sepia-slider").value
+    updateImageFilter()
+})
+
+// APPLY HUE FILTER TO IMAGE
+
+$("#hue-rotate-slider").addEventListener("input", () => {
+    hueRangeValue = $("#hue-rotate-slider").value
+    updateImageFilter()
+})
+
+// APPLY SATURATION FILTER TO IMAGE
+
+$("#saturate-slider").addEventListener("input", () => {
+    saturateRangeValue = $("#saturate-slider").value
+    updateImageFilter()
+})
+
+// APPLY INVERT FILTER TO IMAGE
+
+$("#invert-slider").addEventListener("input", () => {
+    invertRangeValue = $("#invert-slider").value
+    updateImageFilter()
+})
+
+

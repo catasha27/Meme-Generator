@@ -200,6 +200,10 @@ fieldset{
     cursor: pointer;
 }
 
+.image-background-color-value {
+    font-size: 14px;
+}
+
 #image-filter-options {
     display: flex;
     flex-direction: column;
