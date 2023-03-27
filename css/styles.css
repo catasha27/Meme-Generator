@@ -91,7 +91,7 @@ main {
     color: #000000;
 }
 
-img {
+.image-container {
     flex: 1;
     width: 100%;
 }

@@ -41,3 +41,13 @@ $("#btn-dark-mode").addEventListener("click", () => {
         $("#btn-light-mode").classList.remove("hidden")
         $("body").removeAttribute("data-theme", "light-theme")
 })
+
+// DOWNLOAD MEME FUNCTION
+
+const downloadMeme = () => {
+     domtoimage.toBlob($('#meme-container')).then((blob) => {
+        saveAs(blob, 'mi-meme.png')
+      })
+}
+
+$("#btn-download").addEventListener('click', downloadMeme)
