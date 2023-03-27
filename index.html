@@ -38,7 +38,7 @@
     <main>
         <section id="meme-container">
             <header id="top-text-container"><p>TOP TEXT</p></header>
-            <div class="image-container"></div>
+            <div class="image-container" ></div>
             <footer id="bottom-text-container"><p>BOTTOM TEXT</p></footer>
         </section>
         <button id="btn-download" class="btn">
@@ -53,12 +53,12 @@
             <section id="image-menu" class="sidebar">
                 <h2>IMAGEN</h2>
                 <label for="meme-image" class="label">URL</label>
-                <input type="url" name="meme-image" value="" class="input-box">
+                <input type="url" name="meme-image" id="meme-image" value="" class="input-box">
                 <fieldset id="image-background-options">
                     <legend class="label">FONDO</legend>
                     <div class="image-background-color-wrapper input-box">
                         <input type="color" name="image-background-color" id="image-background-color" value="#FFFFFF">
-                        <span class="">#FFFFFF</span>
+                        <span class="image-background-color-value">#FFFFFF</span>
                     </div>
                     <select name="image-blend-options" id="blend-mode-menu" class="input-box">
                         <option value="normal">Ninguno</option>

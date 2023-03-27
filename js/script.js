@@ -51,3 +51,22 @@ const downloadMeme = () => {
 }
 
 $("#btn-download").addEventListener('click', downloadMeme)
+
+
+// ADD URL AS THE MEME IMAGE
+
+$("#meme-image").addEventListener("input", () => {
+    const urlImage = $("#meme-image").value
+    $(".image-container").style.backgroundSize = "cover"
+    $(".image-container").style.backgroundImage = `url(${urlImage})`
+})
+
+
+// MODIFY BACKGROUND COLOR FROM INPUT COLOR
+
+$("#image-background-color").addEventListener("input", () => {
+    const backgroundColorImage = $("#image-background-color").value
+    $(".image-background-color-value").innerHTML = $("#image-background-color").value 
+    $(".image-container").style.backgroundColor = $("#image-background-color").value
+})
+
