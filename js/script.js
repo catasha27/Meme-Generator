@@ -210,3 +210,13 @@ $("#bottom-text-input").addEventListener("input", () => {
     $("#bottom-text-container").innerText = $("#bottom-text-input").value.toUpperCase()
 })
 
+// REMOVE BOTTOM TEXT CONTAINER FROM MEME
+
+$("#no-bottom-text").addEventListener("input", () => {
+    const isChecked = $("#no-bottom-text").checked
+    if (isChecked) {
+        $(".bottom-text-wrapper").classList.add("hidden")
+    } else {
+        $(".bottom-text-wrapper").classList.remove("hidden")
+    }
+})
