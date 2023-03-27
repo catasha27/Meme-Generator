@@ -312,3 +312,10 @@ $("#text-padding-value").addEventListener("input", () => {
     $("#bottom-text-container").style.padding = `${$("#text-padding-value").value}px 50px`
 })
 
+// SET FONT LINE HEIGHT TO TOP AND BOTTOM TEXT
+
+$("#line-spacing-options").addEventListener("input", () => {
+    $("#top-text-container").style.lineHeight = $("#line-spacing-options").value
+    $("#bottom-text-container").style.lineHeight = $("#line-spacing-options").value
+})
+
