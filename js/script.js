@@ -273,3 +273,18 @@ $("#text-background-color").addEventListener("input", () => {
     $(".top-text-wrapper").style.backgroundColor = $("#text-background-color").value
     $(".bottom-text-wrapper").style.backgroundColor = $("#text-background-color").value
 })
+
+// MODIFY BACKGROUND COLOR OF TOP AND BOTTOM TEXTS TO TRANSPARENT
+
+$("#transparent-background").addEventListener("input", () => {
+    const isChecked = $("#transparent-background").checked
+    if (isChecked) {
+        $(".top-text-wrapper").style.backgroundColor=("transparent")
+        $(".bottom-text-wrapper").style.backgroundColor=("transparent")
+    } else {
+        const backgroundColorText = $("#text-background-color").value
+    $("#text-background-color-value").innerHTML = $("#text-background-color").value.toUpperCase() 
+    $(".top-text-wrapper").style.backgroundColor = $("#text-background-color").value
+    $(".bottom-text-wrapper").style.backgroundColor = $("#text-background-color").value
+    }
+})
