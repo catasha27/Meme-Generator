@@ -58,7 +58,7 @@
                     <legend class="label">FONDO</legend>
                     <div class="image-background-color-wrapper input-box">
                         <input type="color" name="image-background-color" id="image-background-color" value="#FFFFFF">
-                        <span class="image-background-color-value">#FFFFFF</span>
+                        <span id="image-background-color-value" class="color-value">#FFFFFF</span>
                     </div>
                     <select name="image-blend-options" id="blend-mode-menu" class="input-box">
                         <option value="normal">Ninguno</option>
@@ -103,29 +103,29 @@
                 <label for="top-text-input" class="label">SUPERIOR</label>
                 <textarea name="top-text-input" id="top-text-input" class="input-box">TOP TEXT</textarea>
                 <div class="no-top-text-wrapper checkbox">
-                    <input type="checkbox" id="no-top-text">
+                    <input type="checkbox" id="no-top-text" aria-label="Checkbox meme sin texto superior">
                     <label for="no-top-text" class="checkbox-label">Sin texto superior</label>
                 </div>
                 <label for="botom-text-input" class="label">INFERIOR</label>
                 <textarea name="bottom-text-input" id="bottom-text-input" class="input-box">BOTTOM TEXT</textarea>
                 <div class="no-bottom-text-wrapper checkbox">
-                    <input type="checkbox" id="no-bottom-text">
+                    <input type="checkbox" id="no-bottom-text" aria-label="Checkbox meme sin texto inferior">
                     <label for="no-bottom-text" class="checkbox-label">Sin texto inferior</label>
                 </div>
                 <fieldset id="font-properties">
                     <legend for="font-selector" class="label">FUENTE</legend>
-                    <select name="font-selector" id="font-selector" class="input-box">
-                        <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
-                        <option value="American Typewritter">American Typewritter</option>
-                        <option value="Andale Mono">Andale Mono</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Impact" selected>Impact</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Times New Roman">Times New Roman</option>
+                    <select name="font-selector" id="font-selector" class="input-box" aria-label="Tipo de fuente">
+                        <option value="Arial" aria-label="Fuente Arial">Arial</option>
+                        <option value="Arial Black" aria-label="Fuente Arial Black">Arial Black</option>
+                        <option value="American Typewritter" aria-label="Fuente American Typewritter">American Typewritter</option>
+                        <option value="Andale Mono" aria-label="Fuente Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS" aria-label="Fuente Comic Sans">Comic Sans MS</option>
+                        <option value="Helvetica" aria-label="Fuente Helvetica">Helvetica</option>
+                        <option value="Impact" aria-label="Fuente Impact" selected>Impact</option>
+                        <option value="Verdana" aria-label="Fuente Verdana">Verdana</option>
+                        <option value="Times New Roman" aria-label="Fuente Times New Roman">Times New Roman</option>
                     </select>
-                    <input type="number" name="font-size-value" id="font-size-value" class="input-box" min="12" value="40">
+                    <input type="number" name="font-size-value" id="font-size-value" class="input-box" min="12" value="40" aria-label="Valor de fuente">
                     <button id="btn-align-text-left" class="btn btn-align-text" value="left" aria-label="Alinear textos del meme a la izquierda">
                         <i class="fas fa-align-left align-icon" aria-hidden="true"></i>
                     </button>
@@ -140,20 +140,20 @@
                     <section class="text-color-wrapper">
                         <label class="label">COLOR</label>
                         <div class="input-box">
-                            <input type="color" name="text-color" id="text-color" value="#000000">
-                            <span class="">#000000</span>
+                            <input type="color" name="text-color" id="text-color" value="#000000" aria-label="Valor color de fuente">
+                            <span id="text-color-value" class="color-value">#000000</span>
                         </div>
                     </section>
                     <section class="text-background-color-wrapper">
                         <label class="label">FONDO</label>
                         <div class="input-box">
-                            <input type="color" name="text-background-color" id="text-background-color" value="#FFFFFF">
-                            <span class="">#FFFFFF</span>
+                            <input type="color" name="text-background-color" id="text-background-color" value="#FFFFFF" aria-label="Valor color de fondo de textos">
+                            <span id="text-background-color-value" class="color-value">#FFFFFF</span>
                         </div>
                     </section>
                 </fieldset>
                 <div class="transparent-background-wrappper checkbox">
-                    <input type="checkbox" id="transparent-background">
+                    <input type="checkbox" id="transparent-background" aria-label="Checkbox color de fondo de textos transparente">
                     <label for="transparent-background" class="checkbox-label">Fondo transparente</label>
                 </div>
                 <fieldset id="outline-options">

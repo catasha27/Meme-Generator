@@ -68,7 +68,7 @@ $("#meme-image").addEventListener("input", () => {
 
 $("#image-background-color").addEventListener("input", () => {
     const backgroundColorImage = $("#image-background-color").value
-    $(".image-background-color-value").innerHTML = $("#image-background-color").value 
+    $("#image-background-color-value").innerHTML = $("#image-background-color").value 
     $(".image-container").style.backgroundColor = $("#image-background-color").value
 })
 
@@ -255,3 +255,13 @@ $("#btn-align-text-right").addEventListener("click", () => {
     $("#top-text-container").style.textAlign = $("#btn-align-text-right").value
     $("#bottom-text-container").style.textAlign = $("#btn-align-text-right").value
 })
+
+// MODIFY FONT COLOR FROM INPUT COLOR
+
+$("#text-color").addEventListener("input", () => {
+    const colorText = $("#text-color").value
+    $("#text-color-value").innerHTML = $("#text-color").value 
+    $("#top-text-container").style.color = $("#text-color").value
+    $("#bottom-text-container").style.color = $("#text-color").value
+})
+
