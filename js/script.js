@@ -220,3 +220,10 @@ $("#no-bottom-text").addEventListener("input", () => {
         $(".bottom-text-wrapper").classList.remove("hidden")
     }
 })
+
+// SET FONT TYPE TO TOP AND BOTTOM TEXT
+
+$("#font-selector").addEventListener("input", () => {
+    $("#top-text-container").style.fontFamily = $("#font-selector").value
+    $("#bottom-text-container").style.fontFamily = $("#font-selector").value
+})
