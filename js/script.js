@@ -265,3 +265,11 @@ $("#text-color").addEventListener("input", () => {
     $("#bottom-text-container").style.color = $("#text-color").value
 })
 
+// MODIFY BACKGROUND COLOR OF TOP AND BOTTOM TEXTS FROM INPUT COLOR
+
+$("#text-background-color").addEventListener("input", () => {
+    const backgroundColorText = $("#text-background-color").value
+    $("#text-background-color-value").innerHTML = $("#text-background-color").value 
+    $(".top-text-wrapper").style.backgroundColor = $("#text-background-color").value
+    $(".bottom-text-wrapper").style.backgroundColor = $("#text-background-color").value
+})
