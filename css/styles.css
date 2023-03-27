@@ -98,6 +98,7 @@ main {
     align-items: center;
     justify-content: center;
     background-color: var(--background-main);
+    min-height: 745px;
     flex: 1;
 }
 
@@ -106,6 +107,8 @@ main {
     flex-direction: column;
     width: 610px;
     height: 610px;
+    max-width: 70vw;
+    max-height: 70vw;
 }
 
 .top-text-wrapper, .bottom-text-wrapper {
@@ -367,4 +370,44 @@ fieldset{
 
 .dark-outline {
     text-shadow: rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px;
+}
+
+/* ######## BREAKPOINTS ######## */
+
+        /* ### TABLET ### */
+
+@media (max-width:700px) {
+
+    /* # HEADER # */    
+
+    body>header {
+        height: 102px;
+    }
+        
+    h1 {
+       font-size: 26px;
+    }
+    
+    /* # MAIN # */
+
+    #top-text-container, #bottom-text-container {
+        font-size: 30px;
+    }
+
+    /* # ASIDES # */
+
+    aside {
+        width: 100%;
+    }
+}
+
+       /* # MOBILE # */
+
+@media (max-width:480px) {
+
+       /* # MAIN # */
+
+    #top-text-container, #bottom-text-container {
+        font-size:22px;
+    }
 }
