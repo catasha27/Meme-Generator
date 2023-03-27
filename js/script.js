@@ -227,3 +227,10 @@ $("#font-selector").addEventListener("input", () => {
     $("#top-text-container").style.fontFamily = $("#font-selector").value
     $("#bottom-text-container").style.fontFamily = $("#font-selector").value
 })
+
+// SET FONT SIZE TO TOP AND BOTTOM TEXT
+
+$("#font-size-value").addEventListener("input", () => {
+    $("#top-text-container").style.fontSize = `${$("#font-size-value").value}px`
+    $("#bottom-text-container").style.fontSize = `${$("#font-size-value").value}px`
+})
