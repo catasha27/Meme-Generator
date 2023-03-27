@@ -203,3 +203,10 @@ $("#no-top-text").addEventListener("input", () => {
         $(".top-text-wrapper").classList.remove("hidden")
     }
 })
+
+// MODIFY BOTTOM TEXT FROM INPUT
+
+$("#bottom-text-input").addEventListener("input", () => {
+    $("#bottom-text-container").innerText = $("#bottom-text-input").value.toUpperCase()
+})
+
