@@ -70,3 +70,9 @@ $("#image-background-color").addEventListener("input", () => {
     $(".image-container").style.backgroundColor = $("#image-background-color").value
 })
 
+
+// APPLY BACKGROUND BLEND MODE
+
+$("#blend-mode-menu").addEventListener("input", () => {
+    $(".image-container").style.backgroundBlendMode = $("#blend-mode-menu").value
+})
