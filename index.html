@@ -17,16 +17,16 @@
         <h1>Generador de Memes</h1>
         <nav>
             <button id="btn-image-menu" class="btn">
-                <i class="fas fa-file-image"></i>Imagen
+                <i class="fas fa-file-image" aria-hidden="true"></i>Imagen
             </button>
             <button id="btn-text-menu" class="btn">
-                <i class="fas fa-font"></i>Texto
+                <i class="fas fa-font" aria-hidden="true"></i>Texto
             </button>
             <button id="btn-light-mode" class="btn">
-                <i class="far fa-lightbulb"></i>Modo claro
+                <i class="far fa-lightbulb" aria-hidden="true"></i>Modo claro
             </button>
             <button id="btn-dark-mode" class="btn hidden">
-                <i class="far fa-lightbulb hidden"></i>Modo oscuro
+                <i class="far fa-lightbulb hidden" aria-hidden="true"></i>Modo oscuro
             </button>
         </nav>
     </header>
@@ -39,12 +39,14 @@
             <footer id="bottom-text-container"><p>BOTTOM TEXT</p></footer>
         </section>
         <button id="btn-download" class="btn">
-            <i class="fas fa-download"></i>Descargar meme
+            <i class="fas fa-download" aria-hidden="true"></i>Descargar meme
         </button>
         <!-- ASIDE MENUS SECTION -->
         <!-- IMAGE MENU -->
-        <aside id="image-menu-panel">
-            <span class="btn-close hidden">&times;</span>
+        <aside id="image-menu-panel" >
+            <button class="btn-close">
+                <span class="close-icon">&times;</span>
+            </button>
             <section id="image-menu" class="sidebar">
                 <h2>IMAGEN</h2>
                 <label for="meme-image" class="label">URL</label>
@@ -84,12 +86,91 @@
                     <input type="range" name="saturation-slider" id="saturation-slider" class="slider" min="100" max="1000" value="100" step="10">
                     <label for="invert-slider" class="slider-label">NEGATIVO</label>
                     <input type="range" name="invert-slider" id="invert-slider" class="slider" min="0" max="1" value="0" step="0.1">
-                    <button type="reset" id="btn-reset-filters" class="btn">Restablecer filtros</button>
                 </fieldset>
+                <button type="reset" id="btn-reset-filters" class="btn">Restablecer filtros</button>
             </section>
         </aside>
         <!-- TEXT MENU -->
         <aside id="text-menu-panel" class="hidden">
+            <button class="btn-close">
+                <span class="close-icon">&times;</span>
+            </button>
+            <section id="text-menu" class="sidebar">
+                <h2>TEXTO</h2>
+                <label for="top-text-input" class="label">SUPERIOR</label>
+                <textarea name="top-text-input" id="top-text-input" class="input-box">TOP TEXT</textarea>
+                <div class="no-top-text-wrapper checkbox">
+                    <input type="checkbox" id="no-top-text">
+                    <label for="no-top-text" class="checkbox-label">Sin texto superior</label>
+                </div>
+                <label for="botom-text-input" class="label">INFERIOR</label>
+                <textarea name="bottom-text-input" id="bottom-text-input" class="input-box">BOTTOM TEXT</textarea>
+                <div class="no-bottom-text-wrapper checkbox">
+                    <input type="checkbox" id="no-bottom-text">
+                    <label for="no-bottom-text" class="checkbox-label">Sin texto inferior</label>
+                </div>
+                <fieldset id="font-properties">
+                    <legend for="font-selector" class="label">FUENTE</legend>
+                    <select name="font-selector" id="font-selector" class="input-box">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewritter">American Typewritter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact" selected>Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                    <input type="number" name="font-size-value" id="font-size-value" class="input-box" min="12" value="40">
+                    <button id="btn-align-text-left" class="btn btn-align-text">
+                        <i class="fas fa-align-left align-icon" aria-hidden="true"></i>
+                    </button>
+                    <button id="btn-align-text-center" class="btn btn-align-text">
+                        <i class="fas fa-align-center align-icon" aria-hidden="true"></i>
+                    </button>
+                    <button id="btn-align-text-right align-icon" class="btn btn-align-text">
+                        <i class="fas fa-align-right" aria-hidden="true"></i>
+                    </button>
+                </fieldset>
+                <fieldset id="text-color-options">
+                    <section class="text-color-wrapper">
+                        <label class="label">COLOR</label>
+                        <div class="input-box">
+                            <input type="color" name="text-color" id="text-color" value="#000000">
+                            <span class="">#000000</span>
+                        </div>
+                    </section>
+                    <section class="text-background-color-wrapper">
+                        <label class="label">FONDO</label>
+                        <div class="input-box">
+                            <input type="color" name="text-background-color" id="text-background-color" value="#FFFFFF">
+                            <span class="">#FFFFFF</span>
+                        </div>
+                    </section>
+                </fieldset>
+                <div class="transparent-background-wrappper checkbox">
+                    <input type="checkbox" id="transparent-background">
+                    <label for="transparent-background" class="checkbox-label">Fondo transparente</label>
+                </div>
+                <fieldset id="outline-options">
+                    <legend class="label">CONTORNO</legend>
+                    <button id="btn-no-outline" class="btn">Ninguno</button>
+                    <button id="btn-light-outline" class="btn">Claro</button>
+                    <button id="btn-dark-outline" class="btn">Oscuro</button>
+                </fieldset>
+                <label for="text-padding-value" class="label">ESPACIADO</label>
+                <input type="number" name="text-padding-value" id="text-padding-value" class="input-box" min="10" max="50" step="1" value="17">
+                <label for="line-spacing-options" class="label">INTERLINEADO</label>
+                <select name="line-spacing-options" id="line-spacing-options" class="input-box">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2" selected>1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </section>
         </aside>    
     </main>
     

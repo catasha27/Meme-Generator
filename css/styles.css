@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
 }
 
 body>header {
@@ -21,26 +22,41 @@ body>header {
     justify-content: space-around;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
 h1 {
     font-size: 36px;
     font-weight: 600;
 }
 
 .btn {
-    background-color: transparent;
+    background-color: #2e7d32;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
     font-weight: 400;
+    height: 36px;
+    padding: 15px;
+}
+
+nav .btn {
+    background-color: transparent;
 }
 
 #btn-text-menu {
-    margin: 0 30px;
+    margin: 0 5px;
 }
 
-i {
+nav i, #btn-download i {
     margin-right: 5px;
+    color: #ffffff;
 }
 
 .hidden {
@@ -81,8 +97,8 @@ img {
 }
 
 #btn-download {
-    background-color: #2e7d32;
-    padding: 15px;
+    /* background-color: #2e7d32; */
+    padding: 25px 15px;
     margin-top: 30px;
 }
 
@@ -90,26 +106,43 @@ img {
     background-color:  #1b5e20;
 }
 
+/* ASIDE PANELS */
+
 aside {
     background-color: lightblue;
     width: 260px;
-    height: 100vh;
-    position: fixed;
+    height: 100%;
+    position: absolute;
     right: 0;
     top: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     padding: 30px 15px;
 }
 
-/* .bth-close {
-    color: #ffffff;
+.btn-close {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    height: 22px;
+    padding: 0px 5px;
+    cursor: pointer;
     position: fixed;
     right: 0;
     top: 15px;
-    
-} */
+}
+
+.btn-close:hover {
+    background-color:  #1b5e20;
+}
+
+.close-icon {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+}
 
 .sidebar {
     display: flex;
@@ -120,20 +153,20 @@ aside {
 h2 {
     font-size: 18px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .label {
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin: 20px 0 8px;
 }
 
 .input-box {
     background-color: #2e7d32;
-    border: none;
+    border: 0;
     border-radius: 3px;
-    margin-bottom: 20px;
+    outline: 0;
+    padding: 5px 10px;
     height: 36px;
 }
 
@@ -141,25 +174,47 @@ fieldset{
     border: none;
 }
 
+/* IMAGE ASIDE PANEL MENU */
+
 #image-background-options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image-background-color-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#image-background-color, #text-color, #text-background-color {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 25px;
+    margin-right: 3px;
+    cursor: pointer;
 }
 
 #image-filter-options {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
-.slider-label {
+.slider-label, .checkbox-label {
     font-size: 12px;
 }
 
 .slider {
+    -webkit-appearance: none;
     margin: 10px 0 15px;
     height: 6px;
-    color: grey;
+    background: grey;
 }
 
 .slider::-webkit-slider-thumb {
@@ -168,8 +223,77 @@ fieldset{
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    color: purple;
+    background: #ffffff;
     cursor: pointer;
   }
 
-  
+#btn-reset-filters {
+    margin-top: 20px;
+    padding: 0 20px;
+    align-self: flex-start;
+}
+
+/* TEXT ASIDE PANEL MENU */
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.checkbox-label {
+    margin-left: 5px;
+}
+
+#font-properties {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#font-selector {
+    flex: 1;
+    margin-bottom: 5px;
+}
+
+#font-size-value {
+    flex: 3;
+    max-width: 50%;
+}
+
+.btn-align-text {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 0;
+    margin-left: 5px;
+}  
+
+#text-color-options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-color-wrapper, .text-background-color-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-color-wrapper div, .text-background-color-wrapper div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#outline-options {
+    margin-top: 20px;
+    display: flex;
+}
+
+#outline-options button {
+    padding: 0 10px;
+}
+
+#btn-light-outline {
+    margin: 0 5px;
+}
